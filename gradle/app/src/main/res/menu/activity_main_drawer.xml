@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/InitialInputs" android:title="Initial Inputs" />
+
+        <item android:id="@+id/Bilirubin" android:title="Bilirubin Calc" />
+        <item android:id="@+id/WeightChange" android:title="Weight Change" />
+        <item android:id="@+id/References" android:title="References" />
+    </group>
+
+</menu>
