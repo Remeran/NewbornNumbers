@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         if (id == R.id.InitialInputs) {
+            Intent myIntent = new Intent(this, )
 
         } else if (id == R.id.Bilirubin) {
 
