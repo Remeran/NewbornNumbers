@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number|numberDecimal"
+        android:ems="10"
+        android:id="@+id/initBilirubin"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_below="@+id/initBilirubinLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <TextView
+        android:text="Current Bilirubin (mg/dL)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/currentBilirubinLabel"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_below="@+id/initBilirubin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/currentBilirubin"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/currentBilirubinLabel"
+        android:layout_alignLeft="@+id/initBilirubin"
+        android:layout_alignStart="@+id/initBilirubin"
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/courseOfAction"
+        android:layout_marginTop="48dp"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:layout_below="@+id/currentBilirubin"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:id="@+id/initBilirubinLabel"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:text="Initial Bilirubin (mg/dL)"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
