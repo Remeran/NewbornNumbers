@@ -3,4 +3,109 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+<<<<<<< HEAD
+=======
+    <TextView
+        android:text="@string/day_two_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:id="@+id/dayTwoLabel"
+        android:layout_below="@+id/dayOneWeightChangeLabel"
+        android:layout_alignRight="@+id/dayNLabel"
+        android:layout_alignEnd="@+id/dayNLabel" />
+
+    <TextView
+        android:text="@string/day_one_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dayOneLabel"
+        android:layout_marginTop="13dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/dayNLabel"
+        android:layout_alignStart="@+id/dayNLabel" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="6"
+        android:id="@+id/dayOneWeightInput"
+        android:maxLines="1"
+        android:gravity="center"
+        android:layout_below="@+id/dayOneLabel"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dayTwoWeightChangeLabel"
+        android:visibility="invisible"
+        android:layout_below="@+id/dayTwoWeightInput"
+        android:layout_alignRight="@+id/dayNWeightChangeLabel"
+        android:layout_alignEnd="@+id/dayNWeightChangeLabel"
+        android:maxEms="15" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dayOneWeightChangeLabel"
+        android:visibility="invisible"
+        android:layout_below="@+id/dayOneWeightInput"
+        android:layout_alignRight="@+id/dayTwoWeightChangeLabel"
+        android:layout_alignEnd="@+id/dayTwoWeightChangeLabel"
+        android:maxEms="15" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="6"
+        android:id="@+id/dayNWeightInput"
+        android:maxLines="1"
+        android:gravity="center"
+        android:layout_below="@+id/dayNLabel"
+        android:layout_alignLeft="@+id/dayOneWeightInput"
+        android:layout_alignStart="@+id/dayOneWeightInput" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="6"
+        android:id="@+id/dayTwoWeightInput"
+        android:maxLines="1"
+        android:gravity="center"
+        android:layout_below="@+id/dayTwoLabel"
+        android:layout_alignLeft="@+id/dayOneWeightInput"
+        android:layout_alignStart="@+id/dayOneWeightInput" />
+
+    <TextView
+        android:text="@string/day_n_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dayNLabel"
+        android:layout_below="@+id/dayTwoWeightChangeLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp" />
+
+    <Button
+        android:text="@string/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/submitWeightButton"
+        android:layout_below="@+id/dayNWeightChangeLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dayNWeightChangeLabel"
+        android:visibility="invisible"
+        android:layout_below="@+id/dayNWeightInput"
+        android:layout_centerHorizontal="true"
+        android:maxEms="15" />
+
+>>>>>>> remotes/origin/Branch3-WeightChange
 </RelativeLayout>
