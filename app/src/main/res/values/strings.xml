@@ -10,6 +10,10 @@
     <string name="day_two_label">Day 2 Weight (g)</string>
     <string name="day_n_label">Day n Weight (g)</string>
 
+    <string name="day_one_error_label">Please input a positive value for Day 1 weight</string>
+    <string name="day_two_error_label">Please input a positive value for Day 2 weight</string>
+    <string name="day_n_error_label">Please input a positive value for Day n weight</string>
+
     <string name="submit">Submit</string>
 
 </resources>
