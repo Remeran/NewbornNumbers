@@ -8,13 +8,20 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name="com.example.android.newbornnumbers.NavbarActivity"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name="com.example.android.newbornnumbers.InitialInputs" />
+        <activity android:name="com.example.android.newbornnumbers.BilirubinCalc" />
+        <activity android:name="com.example.android.newbornnumbers.WeightChange" />
+        <activity android:name="com.example.android.newbornnumbers.References" />
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
