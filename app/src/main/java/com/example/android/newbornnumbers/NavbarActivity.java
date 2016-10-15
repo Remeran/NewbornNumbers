@@ -190,7 +190,17 @@ public class NavbarActivity extends AppCompatActivity {
         }
 
         switch (item.getItemId()) {
-            case R.id.action_settings:
+            case R.id.ini:
+                startActivity(new Intent(this, InitialInputs.class));
+                return true;
+            case R.id.bili:
+                startActivity(new Intent(this, BilirubinCalc.class));
+                return true;
+            case R.id.weight:
+                startActivity(new Intent(this, WeightChange.class));
+                return true;
+            case R.id.ref:
+                startActivity(new Intent(this, References.class));
                 return true;
 
             default:
@@ -203,7 +213,7 @@ public class NavbarActivity extends AppCompatActivity {
     public boolean onPrepareOptionsMenu(Menu menu) {
         // If the nav drawer is open, hide action items related to the content view
         boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
-        menu.findItem(R.id.action_settings).setVisible(!drawerOpen);
+        menu.findItem(R.id.ini).setVisible(!drawerOpen);
         return super.onPrepareOptionsMenu(menu);
     }
 

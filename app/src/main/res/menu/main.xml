@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
+        android:id="@+id/ini"
+        android:title="Initial Inputs" />
+    <item
+        android:id="@+id/bili"
+        android:title="Bilirubin Calc" />
+    <item
+        android:id="@+id/weight"
+        android:title="Weight Change" />
+    <item
+        android:id="@+id/ref"
+        android:title="References" />
+
+
 </menu>

@@ -22,5 +22,6 @@
         <activity android:name="com.example.android.newbornnumbers.WeightChange" />
         <activity android:name="com.example.android.newbornnumbers.References" />
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
