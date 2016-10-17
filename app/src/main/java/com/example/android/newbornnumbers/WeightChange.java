@@ -1,8 +1,6 @@
 package com.example.android.newbornnumbers;
 
-<<<<<<< HEAD
 import android.os.Bundle;
-=======
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.icu.text.DecimalFormat;
@@ -11,45 +9,27 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
->>>>>>> remotes/origin/Branch3-WeightChange
 
-/**
- *
- */
-<<<<<<< HEAD
-public class WeightChange extends NavbarActivity {
-=======
+import org.w3c.dom.Text;
+
 public class WeightChange extends NavbarActivity implements View.OnClickListener {
 
     Button submitButton;
+    EditText birthText;
     EditText dayOneText;
     EditText dayTwoText;
     EditText dayNText;
->>>>>>> remotes/origin/Branch3-WeightChange
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-<<<<<<< HEAD
-=======
         setContentView(R.layout.weight_main);
 
->>>>>>> remotes/origin/Branch3-WeightChange
-        /**
-         * Adding our layout to parent class frame layout.
-         */
         getLayoutInflater().inflate(R.layout.activity_main, frameLayout);
 
-        /**
-         * Setting title and itemChecked
-         */
         mDrawerList.setItemChecked(position, true);
         setTitle(listArray[position]);
-<<<<<<< HEAD
-    }
-}
-=======
 
         submitButton = (Button) findViewById(R.id.submitWeightButton);
 
@@ -58,22 +38,28 @@ public class WeightChange extends NavbarActivity implements View.OnClickListener
 
     public void onClick(View v) {
 
+        birthText = (EditText) findViewById(R.id.birthWeightInput);
         dayOneText = (EditText) findViewById(R.id.dayOneWeightInput);
         dayTwoText = (EditText) findViewById(R.id.dayTwoWeightInput);
         dayNText = (EditText) findViewById(R.id.dayNWeightInput);
 
+        TextView birthWeightPercentLabel = (TextView) findViewById(R.id.birthToDayNWeightChangeLabel);
         TextView dayOnePercentLabel = (TextView) findViewById(R.id.dayOneWeightChangeLabel);
         TextView dayTwoPercentLabel = (TextView) findViewById(R.id.dayTwoWeightChangeLabel);
         TextView dayNPercentLabel = (TextView) findViewById(R.id.dayNWeightChangeLabel);
 
+        double birthWeightInput = 0;
         double dayOneInput = 0;
         double dayTwoInput = 0;
         double dayNInput = 0;
 
-        if (dayOneText != null ) {
+        if (birthText != null && dayOneText !=null) {
+            birthWeightInput = Double.parseDouble(birthText.getText().toString());
             dayOneInput = Double.parseDouble(dayOneText.getText().toString());
-            //to do: grab the birth weight that was entered in initial input
 
+            if (birthWeightInput <= 0) {
+                showErrorMessage(R.string.birth_weight_error_label);
+            }
             if (dayOneInput <=0) {
                 showErrorMessage(R.string.day_one_error_label);
             }
@@ -86,7 +72,6 @@ public class WeightChange extends NavbarActivity implements View.OnClickListener
                 showErrorMessage(R.string.day_two_error_label);
             } else {
                 String percentage = Double.toString(weightChangePercentage(dayOneInput, dayTwoInput));
-                //dayTwoPercentLabel.setText(dayTwoPercentLabel.getText() + percentage + "%");
                 dayTwoPercentLabel.setText("Day 1 - Day 2 Weight Change: " + percentage + "%");
                 dayTwoPercentLabel.setVisibility(TextView.VISIBLE);
             }
@@ -99,12 +84,27 @@ public class WeightChange extends NavbarActivity implements View.OnClickListener
                 showErrorMessage(R.string.day_n_error_label);
             } else {
                 String percentage = Double.toString(weightChangePercentage(dayTwoInput, dayNInput));
-                //dayNPercentLabel.setText(dayNPercentLabel.getText() + percentage + "%");
                 dayNPercentLabel.setText("Day 2 - Day n Weight Change: " + percentage + "%");
                 dayNPercentLabel.setVisibility(TextView.VISIBLE);
             }
         }
-        //to do: add birth - current weight %
+
+        if (birthText != null && dayNText != null) {
+            dayNInput = Double.parseDouble(dayNText.getText().toString());
+            birthWeightInput = Double.parseDouble(birthText.getText().toString());
+
+            if (dayNInput <= 0) {
+                showErrorMessage(R.string.day_n_error_label);
+            }
+            else if (birthWeightInput <= 0){
+                showErrorMessage(R.string.birth_weight_error_label);
+            }
+            else {
+                String percentage = Double.toString(weightChangePercentage(birthWeightInput, dayNInput));
+                birthWeightPercentLabel.setText("Birth - Day n Weight Change: " + percentage + "%");
+                birthWeightPercentLabel.setVisibility(TextView.VISIBLE);
+            }
+        }
     }
 
     protected double weightChangePercentage(double startingWeight, double endingWeight) {
@@ -134,5 +134,3 @@ public class WeightChange extends NavbarActivity implements View.OnClickListener
         alertDialog.show();
     }
 }
-
->>>>>>> remotes/origin/Branch3-WeightChange

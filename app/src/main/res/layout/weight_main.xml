@@ -3,27 +3,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<<<<<<< HEAD
-=======
     <TextView
-        android:text="@string/day_two_label"
+        android:text="@string/birth_weight_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:id="@+id/dayTwoLabel"
-        android:layout_below="@+id/dayOneWeightChangeLabel"
-        android:layout_alignRight="@+id/dayNLabel"
-        android:layout_alignEnd="@+id/dayNLabel" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:id="@+id/birthWeightLabel" />
 
     <TextView
-        android:text="@string/day_one_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/dayOneLabel"
-        android:layout_marginTop="13dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/dayNLabel"
-        android:layout_alignStart="@+id/dayNLabel" />
+        android:layout_below="@+id/dayOneWeightInput"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:id="@+id/dayOneWeightChangeLabel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dayTwoWeightInput"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:id="@+id/dayTwoWeightChangeLabel" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="6"
+        android:gravity="center"
+        android:id="@+id/birthWeightInput"
+        android:layout_below="@+id/birthWeightLabel"
+        android:layout_alignLeft="@+id/dayOneWeightInput"
+        android:layout_alignStart="@+id/dayOneWeightInput" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -37,36 +51,14 @@
         android:layout_centerHorizontal="true" />
 
     <TextView
+        android:text="@string/day_two_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/dayTwoWeightChangeLabel"
-        android:visibility="invisible"
-        android:layout_below="@+id/dayTwoWeightInput"
-        android:layout_alignRight="@+id/dayNWeightChangeLabel"
-        android:layout_alignEnd="@+id/dayNWeightChangeLabel"
-        android:maxEms="15" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/dayOneWeightChangeLabel"
-        android:visibility="invisible"
-        android:layout_below="@+id/dayOneWeightInput"
-        android:layout_alignRight="@+id/dayTwoWeightChangeLabel"
-        android:layout_alignEnd="@+id/dayTwoWeightChangeLabel"
-        android:maxEms="15" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:ems="6"
-        android:id="@+id/dayNWeightInput"
-        android:maxLines="1"
-        android:gravity="center"
-        android:layout_below="@+id/dayNLabel"
-        android:layout_alignLeft="@+id/dayOneWeightInput"
-        android:layout_alignStart="@+id/dayOneWeightInput" />
+        android:id="@+id/dayTwoLabel"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/dayOneWeightChangeLabel"
+        android:layout_alignRight="@+id/dayNLabel"
+        android:layout_alignEnd="@+id/dayNLabel" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -85,9 +77,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/dayNLabel"
+        android:layout_marginTop="11dp"
         android:layout_below="@+id/dayTwoWeightChangeLabel"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="26dp" />
+        android:layout_alignRight="@+id/dayOneLabel"
+        android:layout_alignEnd="@+id/dayOneLabel" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="6"
+        android:id="@+id/dayNWeightInput"
+        android:maxLines="1"
+        android:gravity="center"
+        android:layout_below="@+id/dayNLabel"
+        android:layout_alignLeft="@+id/dayTwoWeightInput"
+        android:layout_alignStart="@+id/dayTwoWeightInput" />
 
     <Button
         android:text="@string/submit"
@@ -95,17 +100,33 @@
         android:layout_height="wrap_content"
         android:id="@+id/submitWeightButton"
         android:layout_below="@+id/dayNWeightChangeLabel"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/dayNWeightChangeLabel"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp" />
+        android:layout_marginTop="51dp"
+        android:id="@+id/birthToDayNWeightChangeLabel" />
+
+    <TextView
+        android:text="@string/day_one_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dayOneLabel"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/birthWeightInput"
+        android:layout_alignLeft="@+id/birthWeightLabel"
+        android:layout_alignStart="@+id/birthWeightLabel" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/dayNWeightChangeLabel"
-        android:visibility="invisible"
         android:layout_below="@+id/dayNWeightInput"
         android:layout_centerHorizontal="true"
-        android:maxEms="15" />
+        android:layout_marginTop="15dp" />
 
->>>>>>> remotes/origin/Branch3-WeightChange
 </RelativeLayout>
