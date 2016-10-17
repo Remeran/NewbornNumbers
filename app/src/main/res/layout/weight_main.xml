@@ -3,8 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<<<<<<< HEAD
-=======
     <TextView
         android:text="@string/day_two_label"
         android:layout_width="wrap_content"
@@ -107,5 +105,4 @@
         android:layout_centerHorizontal="true"
         android:maxEms="15" />
 
->>>>>>> remotes/origin/Branch3-WeightChange
 </RelativeLayout>

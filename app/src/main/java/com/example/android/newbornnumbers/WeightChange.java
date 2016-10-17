@@ -1,41 +1,28 @@
 package com.example.android.newbornnumbers;
 
-<<<<<<< HEAD
-import android.os.Bundle;
-=======
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.icu.text.DecimalFormat;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
->>>>>>> remotes/origin/Branch3-WeightChange
 
 /**
  *
  */
-<<<<<<< HEAD
-public class WeightChange extends NavbarActivity {
-=======
 public class WeightChange extends NavbarActivity implements View.OnClickListener {
 
     Button submitButton;
     EditText dayOneText;
     EditText dayTwoText;
     EditText dayNText;
->>>>>>> remotes/origin/Branch3-WeightChange
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-<<<<<<< HEAD
-=======
         setContentView(R.layout.weight_main);
-
->>>>>>> remotes/origin/Branch3-WeightChange
         /**
          * Adding our layout to parent class frame layout.
          */
@@ -46,10 +33,6 @@ public class WeightChange extends NavbarActivity implements View.OnClickListener
          */
         mDrawerList.setItemChecked(position, true);
         setTitle(listArray[position]);
-<<<<<<< HEAD
-    }
-}
-=======
 
         submitButton = (Button) findViewById(R.id.submitWeightButton);
 
@@ -134,5 +117,3 @@ public class WeightChange extends NavbarActivity implements View.OnClickListener
         alertDialog.show();
     }
 }
-
->>>>>>> remotes/origin/Branch3-WeightChange
