@@ -53,33 +53,50 @@ public class WeightChange extends NavbarActivity implements View.OnClickListener
         double dayTwoInput = 0;
         double dayNInput = 0;
 
-        if (birthText != null && dayOneText !=null) {
+        if (birthText.getText().toString().matches("")) {
+            showErrorMessage(R.string.birth_weight_error_label);
+            return;
+        } else {
             birthWeightInput = Double.parseDouble(birthText.getText().toString());
-            dayOneInput = Double.parseDouble(dayOneText.getText().toString());
-
             if (birthWeightInput <= 0) {
                 showErrorMessage(R.string.birth_weight_error_label);
-            }
-            if (dayOneInput <=0) {
-                showErrorMessage(R.string.day_one_error_label);
+                return;
             }
         }
 
-        if (dayTwoText != null && dayOneText != null) {
-            dayTwoInput = Double.parseDouble(dayTwoText.getText().toString());
+        if (dayOneText.getText().toString().matches("") && !birthText.getText().toString().matches("")) {
+            showErrorMessage(R.string.day_one_error_label);
+            return;
+        } else {
+            dayOneInput = Double.parseDouble(dayOneText.getText().toString());
+            if (dayOneInput <= 0) {
+                showErrorMessage(R.string.day_one_error_label);
+                return;
+            }
+            String percentage = Double.toString(weightChangePercentage(birthWeightInput, dayOneInput));
+            dayOnePercentLabel.setText("Birth - Day 1 Weight Change: " + percentage + "%");
+            dayOnePercentLabel.setVisibility(TextView.VISIBLE);
+        }
 
+        if (dayTwoText.getText().toString().matches("") && !dayOneText.getText().toString().matches("")) {
+            showErrorMessage(R.string.day_two_error_label);
+            return;
+        } else {
+            dayTwoInput = Double.parseDouble(dayTwoText.getText().toString());
             if (dayTwoInput == 0) {
                 showErrorMessage(R.string.day_two_error_label);
-            } else {
-                String percentage = Double.toString(weightChangePercentage(dayOneInput, dayTwoInput));
-                dayTwoPercentLabel.setText("Day 1 - Day 2 Weight Change: " + percentage + "%");
-                dayTwoPercentLabel.setVisibility(TextView.VISIBLE);
+                return;
             }
+            String percentage = Double.toString(weightChangePercentage(dayOneInput, dayTwoInput));
+            dayTwoPercentLabel.setText("Day 1 - Day 2 Weight Change: " + percentage + "%");
+            dayTwoPercentLabel.setVisibility(TextView.VISIBLE);
         }
 
-        if (dayNText != null && dayTwoText != null) {
+        if (dayNText.getText().toString().matches("") && !dayTwoText.getText().toString().matches("")) {
+            showErrorMessage(R.string.day_n_error_label);
+            return;
+        } else {
             dayNInput = Double.parseDouble(dayNText.getText().toString());
-
             if (dayNInput <= 0) {
                 showErrorMessage(R.string.day_n_error_label);
             } else {
@@ -89,21 +106,29 @@ public class WeightChange extends NavbarActivity implements View.OnClickListener
             }
         }
 
-        if (birthText != null && dayNText != null) {
+        if (birthText.getText().toString().matches("") && !dayNText.getText().toString().matches("")) {
+            showErrorMessage(R.string.birth_weight_error_label);
+            return;
+        }
+        else if (!birthText.getText().toString().matches("") && dayNText.getText().toString().matches("")){
+            showErrorMessage(R.string.day_n_error_label);
+            return;
+        }
+        else {
             dayNInput = Double.parseDouble(dayNText.getText().toString());
             birthWeightInput = Double.parseDouble(birthText.getText().toString());
 
             if (dayNInput <= 0) {
                 showErrorMessage(R.string.day_n_error_label);
+                return;
             }
             else if (birthWeightInput <= 0){
                 showErrorMessage(R.string.birth_weight_error_label);
+                return;
             }
-            else {
                 String percentage = Double.toString(weightChangePercentage(birthWeightInput, dayNInput));
                 birthWeightPercentLabel.setText("Birth - Day n Weight Change: " + percentage + "%");
                 birthWeightPercentLabel.setVisibility(TextView.VISIBLE);
-            }
         }
     }
 

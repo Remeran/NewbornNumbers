@@ -17,7 +17,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.example.android.newbornnumbers.InitialInputs" />
         <activity android:name="com.example.android.newbornnumbers.BilirubinCalc" />
         <activity android:name="com.example.android.newbornnumbers.WeightChange" />
         <activity android:name="com.example.android.newbornnumbers.References" />

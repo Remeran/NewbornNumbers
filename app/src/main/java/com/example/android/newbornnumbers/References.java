@@ -20,5 +20,7 @@ public class References extends NavbarActivity {
          */
         mDrawerList.setItemChecked(position, true);
         setTitle(listArray[position]);
+
+        setContentView(R.layout.references_main);
     }
 }

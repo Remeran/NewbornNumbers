@@ -37,7 +37,7 @@ public class NavbarActivity extends AppCompatActivity {
     /**
      * List item array for navigation drawer items.
      */
-    protected String[] listArray = {"Initial Inputs", "Bilirubin Calc", "Weight Change", "References"};
+    protected String[] listArray = {"Bilirubin Calc", "Weight Change", "References"};
 
     /**
      * Static variable for selected item position. Which can be used in child activity to know which item is selected from the list.
@@ -156,15 +156,12 @@ public class NavbarActivity extends AppCompatActivity {
 
         switch (position) {
             case 0:
-                startActivity(new Intent(this, InitialInputs.class));
-                break;
-            case 1:
                 startActivity(new Intent(this, BilirubinCalc.class));
                 break;
-            case 2:
+            case 1:
                 startActivity(new Intent(this, WeightChange.class));
                 break;
-            case 3:
+            case 2:
                 startActivity(new Intent(this, References.class));
                 break;
 
@@ -190,9 +187,6 @@ public class NavbarActivity extends AppCompatActivity {
         }
 
         switch (item.getItemId()) {
-            case R.id.ini:
-                startActivity(new Intent(this, InitialInputs.class));
-                return true;
             case R.id.bili:
                 startActivity(new Intent(this, BilirubinCalc.class));
                 return true;
@@ -213,7 +207,7 @@ public class NavbarActivity extends AppCompatActivity {
     public boolean onPrepareOptionsMenu(Menu menu) {
         // If the nav drawer is open, hide action items related to the content view
         boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
-        menu.findItem(R.id.ini).setVisible(!drawerOpen);
+        menu.findItem(R.id.bili).setVisible(!drawerOpen);
         return super.onPrepareOptionsMenu(menu);
     }
 
